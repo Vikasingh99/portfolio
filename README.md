@@ -38,4 +38,5 @@ A modern, responsive portfolio built using **HTML, CSS, and JavaScript**, featur
 - 🌙 Dark / Light theme toggle
 - 📱 Fully responsive design
 
+Deployed from vercel
 ---
