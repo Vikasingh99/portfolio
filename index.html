@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vikas Singh — Backend Developer</title>
+  <title>Vikas Singh — System Engineer at IBM | Backend Developer</title>
+  <meta name="description" content="Vikas Singh, System Engineer at IBM. Python backend development with FastAPI and PostgreSQL, plus Cloud Full Stack training and project work." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
@@ -772,7 +773,19 @@
       .skills-grid { grid-template-columns: 1fr; }
       .hero-stats { flex-wrap: wrap; gap: 24px; }
     }
+    .hamburger { background: none; border: 0; padding: 8px; }
+    .stat-num { font-size: clamp(1.4rem, 3vw, 2rem); }
+    section { scroll-margin-top: 75px; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
+    .contact-item-value { overflow-wrap: anywhere; }
+    @media (min-width: 901px) { .mobile-menu.open { display: none; } }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
   </style>
+  <noscript><style>.reveal { opacity: 1; transform: none; } @media(max-width:900px){.mobile-menu{display:flex;position:static;padding-top:80px}.hamburger{display:none}}</style></noscript>
 </head>
 <body>
 
@@ -789,10 +802,10 @@
       </div>
       <div class="nav-right">
         <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">🌙</button>
-        <a href="mailto:vikasingh8299@gmail.com" class="btn-hire">Hire Me</a>
-        <div class="hamburger" id="hamburger">
+        <a href="mailto:vikasingh8299@gmail.com" class="btn-hire">Let’s Connect</a>
+        <button class="hamburger" id="hamburger" type="button" aria-label="Toggle navigation" aria-controls="mobileMenu" aria-expanded="false">
           <span></span><span></span><span></span>
-        </div>
+        </button>
       </div>
     </div>
   </nav>
@@ -813,14 +826,14 @@
     <div class="container">
       <div class="hero-inner">
         <div class="hero-content">
-          <div class="hero-badge">Open to Opportunities</div>
+          <div class="hero-badge">System Engineer at IBM</div>
           <h1 class="hero-name">
             Vikas<br>
             <span class="line2">Singh.</span>
           </h1>
-          <p class="hero-title">Backend Developer · Python · FastAPI · PostgreSQL</p>
+          <p class="hero-title">System Engineer at IBM · Python Backend Development</p>
           <p class="hero-desc">
-            I build production-ready REST APIs and scalable backend systems. Specializing in clean architecture, JWT security, and Docker deployments — turning complex requirements into reliable, efficient code.
+            I build backend applications with Python, FastAPI, and PostgreSQL. After completing IBM’s Cloud Full Stack training, I’m developing my practical skills in Java, Spring Boot, frontend development, and containers through project work.
           </p>
           <div class="hero-cta">
             <a href="#projects" class="btn-primary">View Projects →</a>
@@ -828,8 +841,8 @@
           </div>
           <div class="hero-socials">
             <a href="mailto:vikasingh8299@gmail.com" class="social-icon" title="Email">✉️</a>
-            <a href="https://www.linkedin.com/in/vikas-singh-887492196/" target="_blank" class="social-icon" title="LinkedIn">💼</a>
-            <a href="https://github.com/Vikasingh99" target="_blank" class="social-icon" title="GitHub">🐙</a>
+            <a href="https://www.linkedin.com/in/vikas-singh-887492196/" target="_blank" rel="noopener noreferrer" class="social-icon" title="LinkedIn">💼</a>
+            <a href="https://github.com/Vikasingh99" target="_blank" rel="noopener noreferrer" class="social-icon" title="GitHub">🐙</a>
           </div>
           <div class="hero-stats">
             <div>
@@ -837,19 +850,19 @@
               <div class="stat-label">Year Experience</div>
             </div>
             <div>
-              <div class="stat-num">4+</div>
-              <div class="stat-label">Projects Built</div>
+              <div class="stat-num">Python</div>
+              <div class="stat-label">Backend Focus</div>
             </div>
             <div>
-              <div class="stat-num">10+</div>
-              <div class="stat-label">Technologies</div>
+              <div class="stat-num">2026</div>
+              <div class="stat-label">IBM Training Completed</div>
             </div>
           </div>
         </div>
         <div class="hero-photo-wrap">
           <div class="hero-photo-ring">
             <div class="hero-photo-inner">
-              <img src="https://media.licdn.com/dms/image/v2/D5603AQG1QZYo5_GXYg/profile-displayphoto-shrink_800_800/B56ZYuN9qAH0Ac-/0/1744532135633?e=1778112000&v=beta&t=gnhxtGV1tsntk-AW7d4MqT9GvddgbPe6vHebDStK7Q0" alt="Vikas Singh" onerror="this.style.display='none'" />
+              <img src="img.jpeg" alt="Vikas Singh" width="800" height="800" />
             </div>
           </div>
         </div>
@@ -863,27 +876,14 @@
       <div class="about-grid reveal">
         <div class="about-text">
           <p class="section-label">About Me</p>
-          <h2 class="section-title">Backend Dev who <span>ships</span> things.</h2>
-          <p>I'm a Python backend developer with hands-on experience building production-ready REST APIs using FastAPI and PostgreSQL. I specialize in designing scalable backend systems, implementing secure JWT authentication, and optimizing database performance.</p>
-          <p>Through projects like a full-featured social platform backend, I've built and deployed real-world applications with clean architecture, efficient APIs, and Docker-based environments.</p>
-          <div class="about-location">Prayagraj, India</div>
+          <h2 class="section-title">Building backend skills.<br><span>Growing across the stack.</span></h2>
+          <p>I’m Vikas Singh, a System Engineer at IBM in Bengaluru, with previous backend development experience working on TopTutor and MeetInsights. My main focus is Python, FastAPI, PostgreSQL, and building application programming interfaces (APIs).</p>
+          <p>I completed IBM’s Cloud Full Stack training in August 2026. Through guided projects and assignments, I worked with Java, Spring Boot, databases, frontend frameworks, and Docker. I’m continuing to turn that foundation into practical development skills.</p>
+          <div class="about-location">Bengaluru, India</div>
         </div>
         <div>
-          <p class="section-label" style="margin-bottom:20px;">Skills & Technologies</p>
-          <div class="skills-grid">
-            <div class="skill-card"><div class="skill-icon">🐍</div><div class="skill-name">Python</div></div>
-            <div class="skill-card"><div class="skill-icon">⚡</div><div class="skill-name">FastAPI</div></div>
-            <div class="skill-card"><div class="skill-icon">🌐</div><div class="skill-name">Django</div></div>
-            <div class="skill-card"><div class="skill-icon">🐘</div><div class="skill-name">PostgreSQL</div></div>
-            <div class="skill-card"><div class="skill-icon">🔐</div><div class="skill-name">JWT Auth</div></div>
-            <div class="skill-card"><div class="skill-icon">🐳</div><div class="skill-name">Docker</div></div>
-            <div class="skill-card"><div class="skill-icon">🔀</div><div class="skill-name">REST APIs</div></div>
-            <div class="skill-card"><div class="skill-icon">🧪</div><div class="skill-name">Postman</div></div>
-            <div class="skill-card"><div class="skill-icon">📦</div><div class="skill-name">Git & GitHub</div></div>
-            <div class="skill-card"><div class="skill-icon">🤖</div><div class="skill-name">AI / Gemini API</div></div>
-            <div class="skill-card"><div class="skill-icon">🐧</div><div class="skill-name">Linux</div></div>
-            <div class="skill-card"><div class="skill-icon">🚀</div><div class="skill-name">CI/CD</div></div>
-          </div>
+          <p class="section-label" style="margin-bottom:20px;">Skills & IBM Training Completed</p>
+<p class="contact-text">Backend project experience</p><div class="skills-grid"><div class="skill-card"><div class="skill-name">Python</div></div><div class="skill-card"><div class="skill-name">FastAPI</div></div><div class="skill-card"><div class="skill-name">PostgreSQL</div></div><div class="skill-card"><div class="skill-name">REST APIs</div></div><div class="skill-card"><div class="skill-name">JSON Web Token authentication</div></div><div class="skill-card"><div class="skill-name">Postman</div></div><div class="skill-card"><div class="skill-name">Git &amp; GitHub</div></div></div><p class="contact-text" style="margin-top:24px">Training &amp; guided practice</p><div class="skills-grid"><div class="skill-card"><div class="skill-name">Java &amp; Spring Boot</div></div><div class="skill-card"><div class="skill-name">Microservices</div></div><div class="skill-card"><div class="skill-name">MongoDB</div></div><div class="skill-card"><div class="skill-name">JavaScript</div></div><div class="skill-card"><div class="skill-name">React &amp; TypeScript</div></div><div class="skill-card"><div class="skill-name">Node.js &amp; Express</div></div><div class="skill-card"><div class="skill-name">Angular</div></div><div class="skill-card"><div class="skill-name">Docker</div></div></div><p style="color:var(--text2);margin-top:20px">Currently developing: Kubernetes fundamentals.</p>
         </div>
       </div>
     </div>
@@ -895,7 +895,7 @@
       <p class="section-label reveal">Work Experience</p>
       <h2 class="section-title reveal">Where I've <span>worked.</span></h2>
       <div class="timeline">
-        <div class="timeline-item reveal">
+<div class="timeline-item reveal"><div class="timeline-dot"></div><div class="exp-card"><div class="exp-header"><div class="exp-company">IBM</div><div class="exp-duration">June 2026 – Present</div></div><div class="exp-role">System Engineer · Bengaluru</div><div class="exp-achievements"><div class="exp-achievement">Completed Cloud Full Stack training in August 2026 and cleared the assessment.</div><div class="exp-achievement">Practised Java, Spring Boot, database integration, and authentication through guided backend projects.</div><div class="exp-achievement">Worked through frontend and server-side JavaScript assignments using React, TypeScript, Angular, Node.js, and Express.</div><div class="exp-achievement">Completed Docker exercises covering images, containers, ports, volumes, networks, and Compose; continuing to study Kubernetes.</div></div></div></div>        <div class="timeline-item reveal">
           <div class="timeline-dot"></div>
           <div class="exp-card">
             <div class="exp-header">
@@ -940,87 +940,7 @@
     <div class="container">
       <p class="section-label reveal">Projects</p>
       <h2 class="section-title reveal">Things I've <span>built.</span></h2>
-      <div class="projects-grid">
-
-        <div class="project-card reveal">
-          <div class="project-icon">🌐</div>
-          <div class="project-name">Social App Backend</div>
-          <div class="project-desc">Production-ready social platform backend with full user auth, posts, comments, and follows. Built with FastAPI, PostgreSQL, JWT, and Dockerized for deployment.</div>
-          <div class="project-tags">
-            <span class="tag">FastAPI</span><span class="tag">PostgreSQL</span>
-            <span class="tag">JWT</span><span class="tag">Docker</span><span class="tag">Swagger UI</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/Vikasingh99" target="_blank" class="project-link">GitHub →</a>
-          </div>
-        </div>
-
-        <div class="project-card reveal">
-          <div class="project-icon">📄</div>
-          <div class="project-name">PDF Summarizer CLI</div>
-          <div class="project-desc">Local CLI tool that summarizes any PDF using Google Gemini API (free tier). Supports multi-page documents with chunked summarisation and clean output formatting.</div>
-          <div class="project-tags">
-            <span class="tag">Python</span><span class="tag">Gemini API</span>
-            <span class="tag">CLI</span><span class="tag">PDF</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/Vikasingh99" target="_blank" class="project-link">GitHub →</a>
-          </div>
-        </div>
-
-        <div class="project-card reveal">
-          <div class="project-icon">🎓</div>
-          <div class="project-name">TopTutor — Mentoring Platform</div>
-          <div class="project-desc">Backend services for a mentoring platform with REST APIs, secure auth, and scalable DB schemas for student tracking, learning paths, and personalised analytics.</div>
-          <div class="project-tags">
-            <span class="tag">Python</span><span class="tag">REST API</span>
-            <span class="tag">PostgreSQL</span><span class="tag">Authentication</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/Vikasingh99" target="_blank" class="project-link">GitHub →</a>
-          </div>
-        </div>
-
-        <div class="project-card reveal">
-          <div class="project-icon">🔐</div>
-          <div class="project-name">Secure Login System</div>
-          <div class="project-desc">Full-stack login system with HTML/CSS frontend and Python Flask backend. Features JWT tokens, bcrypt password hashing, rate limiting, and brute-force lockout protection.</div>
-          <div class="project-tags">
-            <span class="tag">Flask</span><span class="tag">JWT</span>
-            <span class="tag">bcrypt</span><span class="tag">Rate Limiting</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/Vikasingh99" target="_blank" class="project-link">GitHub →</a>
-          </div>
-        </div>
-
-        <div class="project-card reveal">
-          <div class="project-icon">🤖</div>
-          <div class="project-name">AI Lab Backend</div>
-          <div class="project-desc">Backend infrastructure for AI experimentation and model integration at MeetInsights, including dataset handling pipelines, result logging, and API-based inference systems.</div>
-          <div class="project-tags">
-            <span class="tag">Python</span><span class="tag">AI Integration</span>
-            <span class="tag">REST API</span><span class="tag">Logging</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/Vikasingh99" target="_blank" class="project-link">GitHub →</a>
-          </div>
-        </div>
-
-        <div class="project-card reveal">
-          <div class="project-icon">📊</div>
-          <div class="project-name">FastAPI Job Board API</div>
-          <div class="project-desc">RESTful job board API with full CRUD, user roles (employer/applicant), search/filter endpoints, and PostgreSQL-backed persistence with proper schema design.</div>
-          <div class="project-tags">
-            <span class="tag">FastAPI</span><span class="tag">PostgreSQL</span>
-            <span class="tag">CRUD</span><span class="tag">Roles</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/Vikasingh99" target="_blank" class="project-link">GitHub →</a>
-          </div>
-        </div>
-
-      </div>
+      <div class="projects-grid"><article class="project-card reveal"><div class="project-icon">🎓</div><p class="section-label">Professional contribution</p><h3 class="project-name">TopTutor</h3><p class="project-desc">Contributed backend services for a mentoring platform, including API endpoints, authentication, and student tracking.</p><div class="project-tags"><span class="tag">Python</span><span class="tag">PostgreSQL</span><span class="tag">REST APIs</span></div></article><article class="project-card reveal"><div class="project-icon">📊</div><p class="section-label">Professional contribution</p><h3 class="project-name">MeetInsights</h3><p class="project-desc">Worked on student reflection features, progress tracking, and presenting insights for students and parents.</p><div class="project-tags"><span class="tag">Python</span><span class="tag">Student Reflection</span><span class="tag">Progress Tracking</span></div></article><article class="project-card reveal"><div class="project-icon">👥</div><p class="section-label">Guided training project</p><h3 class="project-name">Workforce Management System</h3><p class="project-desc">Practised employee and department management, transfer requests, role-based access, and token authentication in a Spring Boot application.</p><div class="project-tags"><span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">PostgreSQL</span><span class="tag">Spring Security</span></div></article><article class="project-card reveal"><div class="project-icon">✅</div><p class="section-label">Training project</p><h3 class="project-name">Task Management API</h3><p class="project-desc">Completed a task management backend using Node.js, Express, and MongoDB, with API routes for managing tasks.</p><div class="project-tags"><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">MongoDB</span></div></article><article class="project-card reveal"><div class="project-icon">📅</div><p class="section-label">Personal project · In development</p><h3 class="project-name">Calendar Reminder App</h3><p class="project-desc">Developing configurable email reminders for Google Calendar events, with scheduled checks and reminder preferences.</p><div class="project-tags"><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">Google Calendar API</span></div></article><article class="project-card reveal"><div class="project-icon">📄</div><p class="section-label">Personal project · In development</p><h3 class="project-name">PDF Summarizer</h3><p class="project-desc">Exploring document extraction and AI-assisted summaries, with work toward handling larger documents and source references.</p><div class="project-tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">Document Processing</span></div></article></div><p style="margin-top:28px;color:var(--text2)">Explore my public work on <a class="project-link" href="https://github.com/Vikasingh99" target="_blank" rel="noopener noreferrer">GitHub →</a></p>
     </div>
   </section>
 
@@ -1048,7 +968,7 @@
       <div class="contact-grid reveal">
         <div>
           <p class="contact-text">
-            I'm actively looking for backend developer roles. Whether you have an exciting opportunity, a project to discuss, or just want to say hello — my inbox is always open.
+            I enjoy connecting with developers and exchanging ideas about backend development, full stack projects, and practical learning. Have a project or an idea to discuss? Get in touch.
           </p>
           <div class="contact-items">
             <a href="mailto:vikasingh8299@gmail.com" class="contact-item">
@@ -1058,14 +978,14 @@
                 <div class="contact-item-value">vikasingh8299@gmail.com</div>
               </div>
             </a>
-            <a href="https://www.linkedin.com/in/vikas-singh-887492196/" target="_blank" class="contact-item">
+            <a href="https://www.linkedin.com/in/vikas-singh-887492196/" target="_blank" rel="noopener noreferrer" class="contact-item">
               <div class="contact-item-icon">💼</div>
               <div>
                 <div class="contact-item-label">LinkedIn</div>
                 <div class="contact-item-value">vikas-singh-887492196</div>
               </div>
             </a>
-            <a href="https://github.com/Vikasingh99" target="_blank" class="contact-item">
+            <a href="https://github.com/Vikasingh99" target="_blank" rel="noopener noreferrer" class="contact-item">
               <div class="contact-item-icon">🐙</div>
               <div>
                 <div class="contact-item-label">GitHub</div>
@@ -1076,27 +996,27 @@
               <div class="contact-item-icon">📍</div>
               <div>
                 <div class="contact-item-label">Location</div>
-                <div class="contact-item-value">Prayagraj, India</div>
+                <div class="contact-item-value">Bengaluru, India</div>
               </div>
             </div>
           </div>
         </div>
         <div>
-          <div class="contact-form">
+          <form class="contact-form" onsubmit="handleFormSubmit(event)">
             <div class="form-group">
-              <label class="form-label">Your Name</label>
-              <input type="text" class="form-input" placeholder="John Doe" />
+              <label class="form-label" for="name">Your Name</label>
+              <input id="name" name="name" autocomplete="name" required type="text" class="form-input" placeholder="John Doe" />
             </div>
             <div class="form-group">
-              <label class="form-label">Email Address</label>
-              <input type="email" class="form-input" placeholder="john@company.com" />
+              <label class="form-label" for="email">Email Address</label>
+              <input id="email" name="email" autocomplete="email" required type="email" class="form-input" placeholder="john@company.com" />
             </div>
             <div class="form-group">
-              <label class="form-label">Message</label>
-              <textarea class="form-textarea" placeholder="Tell me about the opportunity..."></textarea>
+              <label class="form-label" for="message">Message</label>
+              <textarea id="message" name="message" required class="form-textarea" placeholder="Tell me about your idea..."></textarea>
             </div>
-            <button class="form-btn" onclick="handleFormSubmit(this)">Send Message →</button>
-          </div>
+            <p style="font-size:.85rem;color:var(--text2)">Opens your email app with a draft. Send the email there to contact me.</p><button class="form-btn" type="submit">Open Email Draft →</button>
+          </form>
         </div>
       </div>
     </div>
@@ -1104,7 +1024,7 @@
 
   <!-- ── FOOTER ── -->
   <footer>
-    <p>Designed & built by <span>Vikas Singh</span> · 2025 · All rights reserved.</p>
+    <p>Designed & built by <span>Vikas Singh</span> · 2026 · All rights reserved.</p>
   </footer>
 
   <!-- ── JS ── -->
@@ -1112,7 +1032,8 @@
     // Theme toggle
     const toggle = document.getElementById('themeToggle');
     const html = document.documentElement;
-    const saved = localStorage.getItem('theme') || 'dark';
+    let saved = 'dark';
+    try { saved = localStorage.getItem('theme') || 'dark'; } catch (_) {}
     html.setAttribute('data-theme', saved);
     toggle.textContent = saved === 'dark' ? '🌙' : '☀️';
 
@@ -1121,7 +1042,7 @@
       const next = current === 'dark' ? 'light' : 'dark';
       html.setAttribute('data-theme', next);
       toggle.textContent = next === 'dark' ? '🌙' : '☀️';
-      localStorage.setItem('theme', next);
+      try { localStorage.setItem('theme', next); } catch (_) {}
     });
 
     // Sticky nav
@@ -1134,9 +1055,11 @@
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
     hamburger.addEventListener('click', () => {
-      mobileMenu.classList.toggle('open');
+      const open = mobileMenu.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', String(open));
     });
-    function closeMobile() { mobileMenu.classList.remove('open'); }
+    function closeMobile() { mobileMenu.classList.remove('open'); hamburger.setAttribute('aria-expanded', 'false'); }
+    document.addEventListener('keydown', event => { if (event.key === 'Escape') closeMobile(); });
 
     // Scroll reveal
     const reveals = document.querySelectorAll('.reveal');
@@ -1151,7 +1074,9 @@
     reveals.forEach(el => observer.observe(el));
 
     // Form submit
-    function handleFormSubmit(btn) {
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      const btn = event.currentTarget;
       const name = btn.closest('.contact-form').querySelector('input[type="text"]').value;
       const email = btn.closest('.contact-form').querySelector('input[type="email"]').value;
       const msg = btn.closest('.contact-form').querySelector('textarea').value;
